@@ -7,7 +7,18 @@ function App() {
     const message = form.message.value;
 
     console.log(number, message);
+
+    console.log();
+
+    const url = `${import.meta.env.VITE_MAIN_API}phone=${number}&msg=${message}`
+    console.log(url);
+
+    setTimeout(function () {
+      window.open(url, 'name', 'height=10, width=10');
+    }, 1000);
+
     
+
   }
 
   return (
